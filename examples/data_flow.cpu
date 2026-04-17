@@ -1,0 +1,10 @@
+# Example program for testing logic and data flow.
+LOAD R1 3
+LOAD R2 4
+ADD R1 R2 R3
+STORE R3 BUF0
+READ BUF0 R4
+SEND R4 UPLINK
+RECV UPLINK R5
+EMIT R5
+HALT

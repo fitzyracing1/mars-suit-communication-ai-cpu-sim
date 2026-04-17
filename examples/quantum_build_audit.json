@@ -1,0 +1,34 @@
+{
+  "name": "Quantum Uplink Build",
+  "target": "uplink-audit",
+  "simulator": "wifi_cpu",
+  "program": [
+    "LOAD R1 5",
+    "LOAD R2 8",
+    "ADD R1 R2 R3",
+    "STORE R3 QBUF",
+    "READ QBUF R4",
+    "SEND R4 QPORT",
+    "RECV QPORT R5",
+    "EMIT R5",
+    "HALT"
+  ],
+  "expectations": {
+    "halted": true,
+    "output": [13],
+    "registers": {
+      "R3": 13,
+      "R5": 13
+    },
+    "memory": {
+      "QBUF": 13
+    },
+    "ports": {
+      "QPORT": 13
+    },
+    "trace_contains": [
+      "STORE R3",
+      "EMIT R5"
+    ]
+  }
+}

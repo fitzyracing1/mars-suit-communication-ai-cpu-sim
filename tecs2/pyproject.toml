@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=58", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "series-gate-cpu"
+version = "0.1.0"
+description = "Second simulated CPU with 5th series, 2nd return, 3 logic, 4th gate, and 1A1 option modes"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Joshua Fitzgerald" }
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.2"]
+
+[project.scripts]
+series-gate-cpu = "series_gate_cpu.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
