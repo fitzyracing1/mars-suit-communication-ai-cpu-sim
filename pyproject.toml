@@ -37,6 +37,7 @@ wifi-cpu = "wifi_cpu.cli:main"
 Homepage = "https://fitzyracing1.github.io/mars-suit-communication-ai-cpu-sim/"
 Repository = "https://github.com/fitzyracing1/mars-suit-communication-ai-cpu-sim"
 Issues = "https://github.com/fitzyracing1/mars-suit-communication-ai-cpu-sim/issues"
+Funding = "https://github.com/sponsors/fitzyracing1"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
